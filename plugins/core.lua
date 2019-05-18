@@ -908,7 +908,7 @@ if matches[1] == '/lockflood' then
    elseif lang then
 			text = 'تم تفعيل التكرار '
     end
-			data[tostring(matches[2])]["settings"]["flood"] = ""no" "
+			data[tostring(matches[2])]["settings"]["flood"] = "no"
 			save_data(_config.moderation.data, data)
 		end
 		get_alert(msg.cb_id, text)
