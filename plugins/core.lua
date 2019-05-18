@@ -56,21 +56,21 @@ local lang = redis:get(hash)
 		}				
 	}
   elseif lang then
-	 text = '_به تنظیمات کلی خوشآمدید_'
+	 text = '_الاعدادات_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "> تنظیمات", callback_data="/settings:"..GP_id},
-			{text = "> لیست بیصدا", callback_data="/mutelist:"..GP_id}
+			{text = "> الاعدادات", callback_data="/settings:"..GP_id},
+			{text = "> قائمة المنع", callback_data="/mutelist:"..GP_id}
 		},
 		{
-			{text = '> قابلیت های بیشتر ', callback_data = '/more:'..GP_id}
+			{text = '> المزيد', callback_data = '/more:'..GP_id}
 		},
 		{
-			{text = '> درباره ما ', callback_data = '/beyond:'..GP_id}
+			{text = '> عنا ', callback_data = '/beyond:'..GP_id}
 		},
 		{
-			{text= '> بازگشت' ,callback_data = '/lang:'..GP_id}
+			{text= '> رجوع' ,callback_data = '/lang:'..GP_id}
 		}				
 	}
   end
@@ -114,11 +114,11 @@ local settings = data[tostring(GP_id)]["settings"]
 		}				
 	}
    elseif lang then
- text = '_به تنظیمات بیشتر خوش آمدید_'
+ text = '_المزيد من الإعدادات_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = '> حداکثر پیام های مکرر ', callback_data = 'BeyondTeam'}
+			{text = '> الحد الأقصى للرسائل المتكررة	', callback_data = 'BeyondTeam'}
 		},
 		{
 			{text = "➕", callback_data='/floodup:'..GP_id}, 
@@ -126,7 +126,7 @@ local settings = data[tostring(GP_id)]["settings"]
 			{text = "➖", callback_data='/flooddown:'..GP_id}
 		},
 		{
-			{text = '> حداکثر حروف مجاز ', callback_data = 'BeyondTeam'}
+			{text = '> الحد الأقصى المسموح به الحروف', callback_data = 'BeyondTeam'}
 		},
 		{
 			{text = "➕", callback_data='/charup:'..GP_id}, 
@@ -134,7 +134,7 @@ local settings = data[tostring(GP_id)]["settings"]
 			{text = "➖", callback_data='/chardown:'..GP_id}
 		},
 		{
-			{text = '> زمان بررسی پیام های مکرر ', callback_data = 'BeyondTeam'}
+			{text = '> المؤقت', callback_data = 'BeyondTeam'}
 		},
 		{
 			{text = "➕", callback_data='/floodtimeup:'..GP_id}, 
@@ -286,66 +286,66 @@ local lang = redis:get(hash)
 		}				
 	}
      elseif lang then
- text = '_به تنظیمات گروه خوش آمدید_'
+ text = '_الاعدادات_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "> قفل ویرایش", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل التعديل", callback_data='BeyondTeam'}, 
 			{text = lock_edit, callback_data="/lockedit:"..GP_id}
 		},
 		{
-			{text = "> قفل لینک", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل الروابط", callback_data='BeyondTeam'}, 
 			{text = lock_link, callback_data="/locklink:"..GP_id}
 		},
 		{
-			{text = "> قفل تگ", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل الهاتشاق", callback_data='BeyondTeam'}, 
 			{text = lock_tag, callback_data="/locktags:"..GP_id}
 		},
 		{
-			{text = "> قفل ورود", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل الانضمام", callback_data='BeyondTeam'}, 
 			{text = lock_join, callback_data="/lockjoin:"..GP_id}
 		},
 		{
-			{text = "> قفل پیام های مکرر", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل التكرار", callback_data='BeyondTeam'}, 
 			{text = lock_flood, callback_data="/lockflood:"..GP_id}
 		},
 		{
-			{text = "> قفل هرزنامه", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل السبام", callback_data='BeyondTeam'}, 
 			{text = lock_spam, callback_data="/lockspam:"..GP_id}
 		},
 		{
-			{text = "> قفل فراخوانی", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل المنشن", callback_data='BeyondTeam'}, 
 			{text = lock_mention, callback_data="/lockmention:"..GP_id}
 		},
 		{
-			{text = "> قفل عربی", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل الحروف العربية", callback_data='BeyondTeam'}, 
 			{text = lock_arabic, callback_data="/lockarabic:"..GP_id}
 		},
 		{
-			{text = "> قفل صفحات وب", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل صفحات الويب", callback_data='BeyondTeam'}, 
 			{text = lock_webpage, callback_data="/lockwebpage:"..GP_id}
 		},
 		{
-			{text = "> قفل فونت", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل التنسيق", callback_data='BeyondTeam'}, 
 			{text = lock_markdown, callback_data="/lockmarkdown:"..GP_id}
 		},
 		{
-			{text = "> قفل سنجاق کردن", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل التثبيت", callback_data='BeyondTeam'}, 
 			{text = lock_pin, callback_data="/lockpin:"..GP_id}
 		},
 		{
-			{text = "> قفل ربات ها", callback_data='BeyondTeam'}, 
+			{text = "> تعطيل البوتات", callback_data='BeyondTeam'}, 
 			{text = lock_bots, callback_data="/lockbots:"..GP_id}
 		},
 		{
-			{text = "> خوشآمد گویی", callback_data='BeyondTeam'}, 
+			{text = "> الترحيب", callback_data='BeyondTeam'}, 
 			{text = group_welcone, callback_data="/welcome:"..GP_id}
 		},
 		{
-			{text = '> تنظیمات بیشتر ', callback_data = '/moresettings:'..GP_id}
+			{text = '> المزيد من التفضيلات ', callback_data = '/moresettings:'..GP_id}
 		},
 		{
-			{text = '> بازگشت ', callback_data = '/option:'..GP_id}
+			{text = '> التفضيلات', callback_data = '/option:'..GP_id}
 		}				
 	}
   end
@@ -513,75 +513,75 @@ local lang = redis:get(hash)
 		}				
 	}
    elseif lang then
-	 text = '_به لیست بیصدای گروه خوش آمدید_'
+	 text = '_قائمة المنع_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "> بیصدا همه", callback_data='BeyondTeam'}, 
+			{text = "> منع الكل", callback_data='BeyondTeam'}, 
 			{text = mute_all, callback_data="/muteall:"..GP_id}
 		},
 		{
-			{text = "> بیصدا تصاویر متحرک", callback_data='BeyondTeam'}, 
+			{text = "> منع الصور المتحركة", callback_data='BeyondTeam'}, 
 			{text = mute_gif, callback_data="/mutegif:"..GP_id}
 		},
 		{
-			{text = "> بیصدا متن", callback_data='BeyondTeam'}, 
+			{text = "> منع الكتابة", callback_data='BeyondTeam'}, 
 			{text = mute_text, callback_data="/mutetext:"..GP_id}
 		},
 		{
-			{text = "> بیصدا اینلاین", callback_data='BeyondTeam'}, 
+			{text = "> منع الانلاين", callback_data='BeyondTeam'}, 
 			{text = mute_inline, callback_data="/muteinline:"..GP_id}
 		},
 		{
-			{text = "> بیصدا بازی", callback_data='BeyondTeam'}, 
+			{text = "> منع الالعاب", callback_data='BeyondTeam'}, 
 			{text = mute_game, callback_data="/mutegame:"..GP_id}
 		},
 		{
-			{text = "> بیصدا عکس", callback_data='BeyondTeam'}, 
+			{text = "> منع الصور", callback_data='BeyondTeam'}, 
 			{text = mute_photo, callback_data="/mutephoto:"..GP_id}
 		},
 		{
-			{text = "> بیصدا فیلم", callback_data='BeyondTeam'}, 
+			{text = "> منع الفيديو", callback_data='BeyondTeam'}, 
 			{text = mute_video, callback_data="/mutevideo:"..GP_id}
 		},
 		{
-			{text = "> بیصدا آهنگ", callback_data='BeyondTeam'}, 
+			{text = "> منع الصوتيات", callback_data='BeyondTeam'}, 
 			{text = mute_audio, callback_data="/muteaudio:"..GP_id}
 		},
 		{
-			{text = "> بیصدا صدا", callback_data='BeyondTeam'}, 
+			{text = "> منع الملاحظة الصوتية ", callback_data='BeyondTeam'}, 
 			{text = mute_voice, callback_data="/mutevoice:"..GP_id}
 		},
 		{
-			{text = "> بیصدا استیکر", callback_data='BeyondTeam'}, 
+			{text = "> منع الملصقات", callback_data='BeyondTeam'}, 
 			{text = mute_sticker, callback_data="/mutesticker:"..GP_id}
 		},
 		{
-			{text = "> بیصدا مخاطب", callback_data='BeyondTeam'}, 
+			{text = "> منع جهات الاتصال", callback_data='BeyondTeam'}, 
 			{text = mute_contact, callback_data="/mutecontact:"..GP_id}
 		},
 		{
-			{text = "> بیصدا نقل و قول", callback_data='BeyondTeam'}, 
+			{text = "> منع إعادة التوجيه", callback_data='BeyondTeam'}, 
 			{text = mutes.mute_forward, callback_data="/muteforward:"..GP_id}
 		},
 		{
-			{text = "> بیصدا موقعیت", callback_data='BeyondTeam'}, 
+			{text = "> منع الموقع", callback_data='BeyondTeam'}, 
 			{text = mute_location, callback_data="/mutelocation:"..GP_id}
 		},
 		{
-			{text = "> بیصدا فایل", callback_data='BeyondTeam'}, 
+			{text = "> منع المستندات", callback_data='BeyondTeam'}, 
 			{text = mute_document, callback_data="/mutedocument:"..GP_id}
 		},
 		{
-			{text = "> بیصدا خدمات تلگرام", callback_data='BeyondTeam'}, 
+			{text = "> منع خدمات تيليجرام", callback_data='BeyondTeam'}, 
 			{text = mute_tgservice, callback_data="/mutetgservice:"..GP_id}
 		},
 		{
-			{text = "> بیصدا کیبورد", callback_data='BeyondTeam'}, 
+			{text = "> منع لوحة المفاتيح", callback_data='BeyondTeam'}, 
 			{text = mute_keyboard, callback_data="/mutekeyboard:"..GP_id}
 		},
 		{
-			{text = '> بازگشت ', callback_data = '/option:'..GP_id}
+			{text = '> التفضيلات', callback_data = '/option:'..GP_id}
 		}				
 	}
   end
@@ -670,13 +670,13 @@ local lang = redis:get(hash)
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
     elseif not data[tostring(matches[2])] then
      if not lang then
 		edit_inline(msg.message_id, "`Group Is Not Added`")
    elseif lang then
-		edit_inline(msg.message_id, "_گروه به لیست مدیریتی ربات اضافه نشده_")
+		edit_inline(msg.message_id, "_المجموعة غير مضافة_")
    end
 	else
 	local text = '_Please Select An_ *Language*'
@@ -684,7 +684,7 @@ local lang = redis:get(hash)
 	keyboard.inline_keyboard = {
 		{
 			{text = "> English", callback_data="/english:"..matches[2]},
-			{text = '> فارسی ', callback_data = '/persian:'..matches[2]}
+			{text = '> عربي ', callback_data = '/persian:'..matches[2]}
 		},
 		{
 			{text= '> Exit' ,callback_data = '/exit:'..matches[2]}
@@ -698,7 +698,7 @@ end
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
     redis:del(hash)
@@ -711,7 +711,7 @@ end
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
     redis:set(hash, true)
@@ -724,7 +724,7 @@ end
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 	options(msg, matches[2])
@@ -735,7 +735,7 @@ if matches[1] == '/settings' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		setting(msg, data, matches[2])
@@ -746,7 +746,7 @@ if matches[1] == '/mutelist' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		mutelists(msg, data, matches[2])
@@ -757,7 +757,7 @@ if matches[1] == '/moresettings' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		moresetting(msg, data, matches[2])
@@ -770,7 +770,7 @@ if matches[1] == '/locklink' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local locklink = data[tostring(matches[2])]["settings"]["lock_link"]
@@ -778,7 +778,7 @@ if matches[1] == '/locklink' then
    if not lang then
 			text = 'Link Has Been Locked'
    elseif lang then
-			text = 'قفل لینک فعال شد'
+			text = 'تم تعطيل الروابط'
     end
 			data[tostring(matches[2])]["settings"]["lock_link"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -786,7 +786,7 @@ if matches[1] == '/locklink' then
    if not lang then
 			text = 'Link Has Been Unlocked'
    elseif lang then
-			text = 'قفل لینک غیر فعال شد'
+			text = 'تم تفعيل الروابط '
     end
 			data[tostring(matches[2])]["settings"]["lock_link"] = "no"
 			save_data(_config.moderation.data, data)
@@ -800,7 +800,7 @@ if matches[1] == '/lockedit' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local lockedit = data[tostring(matches[2])]["settings"]["lock_edit"]
@@ -808,7 +808,7 @@ if matches[1] == '/lockedit' then
    if not lang then
 			text = 'Edit Has Been Locked'
    elseif lang then
-			text = 'قفل ویرایش فعال شد'
+			text = 'تم تعطيل التعديل '
     end
 			data[tostring(matches[2])]["settings"]["lock_edit"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -816,7 +816,7 @@ if matches[1] == '/lockedit' then
    if not lang then
 			text = 'Edit Has Been Unlocked'
    elseif lang then
-			text = 'قفل ویرایش غیر فعال شد'
+			text = 'تم تفعيل التعديل '
     end
 			data[tostring(matches[2])]["settings"]["lock_edit"] = "no"
 			save_data(_config.moderation.data, data)
@@ -830,7 +830,7 @@ if matches[1] == '/locktags' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_tag"]
@@ -838,7 +838,7 @@ if matches[1] == '/locktags' then
    if not lang then
 			text = 'Tags Has Been Locked'
    elseif lang then
-			text = 'قفل تگ فعال شد'
+			text = 'تم تعطيل الهاشتاق '
     end
             data[tostring(matches[2])]["settings"]["lock_tag"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -846,7 +846,7 @@ if matches[1] == '/locktags' then
    if not lang then
 			text = 'Tags Has Been Unlocked'
    elseif lang then
-			text = 'قفل تگ غیر فعال شد'
+			text = 'تم تفعيل الهاشتاق '
     end
 			data[tostring(matches[2])]["settings"]["lock_tag"] = "no"
 			save_data(_config.moderation.data, data)
@@ -860,7 +860,7 @@ if matches[1] == '/lockjoin' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_join"]
@@ -868,7 +868,7 @@ if matches[1] == '/lockjoin' then
    if not lang then
 			text = 'Join Has Been Locked'
    elseif lang then
-			text = 'قفل ورود فعال شد'
+			text = 'تم تعطيل الانضمام '
     end
             data[tostring(matches[2])]["settings"]["lock_join"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -876,7 +876,7 @@ if matches[1] == '/lockjoin' then
    if not lang then
 			text = 'Join Has Been Unlocked'
    elseif lang then
-			text = 'قفل ورود غیر فعال شد'
+			text = 'تم تفعيل الانضمام '
     end
 			data[tostring(matches[2])]["settings"]["lock_join"] = "no"
 			save_data(_config.moderation.data, data)
@@ -890,7 +890,7 @@ if matches[1] == '/lockflood' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["flood"]
@@ -898,7 +898,7 @@ if matches[1] == '/lockflood' then
    if not lang then
 			text = 'Flood Has Been Locked'
    elseif lang then
-			text = 'قفل پیام های مکرر فعال شد'
+			text = 'تم تعطيل التكرار   '
     end
             data[tostring(matches[2])]["settings"]["flood"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -906,9 +906,9 @@ if matches[1] == '/lockflood' then
    if not lang then
 			text = 'Flood Has Been Unlocked'
    elseif lang then
-			text = 'قفل پیام های مکرر غیر فعال شد'
+			text = 'تم تفعيل التكرار '
     end
-			data[tostring(matches[2])]["settings"]["flood"] = "no"
+			data[tostring(matches[2])]["settings"]["flood"] = ""no" "
 			save_data(_config.moderation.data, data)
 		end
 		get_alert(msg.cb_id, text)
@@ -920,7 +920,7 @@ if matches[1] == '/lockspam' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_spam"]
@@ -928,7 +928,7 @@ if matches[1] == '/lockspam' then
    if not lang then
 			text = 'Spam Has Been Locked'
    elseif lang then
-			text = 'قفل هرزنامه فعال شد'
+			text = 'تم تعطيل السبام '
     end
             data[tostring(matches[2])]["settings"]["lock_spam"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -936,7 +936,7 @@ if matches[1] == '/lockspam' then
    if not lang then
 			text = 'Spam Has Been Unlocked'
    elseif lang then
-			text = 'قفل هرزنامه غیر فعال شد'
+			text = 'تم تفعيل السبام '
     end
 			data[tostring(matches[2])]["settings"]["lock_spam"] = "no"
 			save_data(_config.moderation.data, data)
@@ -950,7 +950,7 @@ if matches[1] == '/lockmention' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_mention"]
@@ -958,7 +958,7 @@ if matches[1] == '/lockmention' then
    if not lang then
 			text = 'Mention Has Been Locked'
    elseif lang then
-			text = 'قفل فراخوانی فعال شد'
+			text = 'تم تعطيل المنشن '
     end
             data[tostring(matches[2])]["settings"]["lock_mention"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -966,7 +966,7 @@ if matches[1] == '/lockmention' then
    if not lang then
 			text = 'Mention Has Been Unlocked'
    elseif lang then
-			text = 'قفل فراخوانی غیر فعال شد'
+			text = 'تم تفعيل المنشن '
     end
 			data[tostring(matches[2])]["settings"]["lock_mention"] = "no"
 			save_data(_config.moderation.data, data)
@@ -980,7 +980,7 @@ if matches[1] == '/lockarabic' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_arabic"]
@@ -988,7 +988,7 @@ if matches[1] == '/lockarabic' then
    if not lang then
 			text = 'Arabic Has Been Locked'
    elseif lang then
-			text = 'قفل عربی فعال شد'
+			text = 'تم تعطيل العربية '
     end
             data[tostring(matches[2])]["settings"]["lock_arabic"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -996,7 +996,7 @@ if matches[1] == '/lockarabic' then
    if not lang then
 			text = 'Arabic Has Been Unlocked'
    elseif lang then
-			text = 'قفل عربی غیر فعال شد'
+			text = 'تم تفعيل العربية '
     end
 			data[tostring(matches[2])]["settings"]["lock_arabic"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1010,7 +1010,7 @@ if matches[1] == '/lockwebpage' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_webpage"]
@@ -1018,7 +1018,7 @@ if matches[1] == '/lockwebpage' then
    if not lang then
 			text = 'Webpage Has Been Locked'
    elseif lang then
-			text = 'قفل صفحات وب فعال شد'
+			text = 'تم تعطيل صفحات الويب '
     end
             data[tostring(matches[2])]["settings"]["lock_webpage"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1026,7 +1026,7 @@ if matches[1] == '/lockwebpage' then
    if not lang then
 			text = 'Webpage Has Been Unlocked'
    elseif lang then
-			text = 'قفل صفحات وب غیر فعال شد'
+			text = 'تم تفعيل صفحات الويب '
     end
 			data[tostring(matches[2])]["settings"]["lock_webpage"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1040,7 +1040,7 @@ if matches[1] == '/lockmarkdown' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_markdown"]
@@ -1048,7 +1048,7 @@ if matches[1] == '/lockmarkdown' then
    if not lang then
 			text = 'Markdown Has Been Locked'
    elseif lang then
-			text = 'قفل فونت فعال شد'
+			text = 'تم تعطيل التنسيق '
     end
             data[tostring(matches[2])]["settings"]["lock_markdown"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1056,7 +1056,7 @@ if matches[1] == '/lockmarkdown' then
    if not lang then
 			text = 'Markdown Has Been Unlocked'
    elseif lang then
-			text = 'قفل فونت غیر فعال شد'
+			text = 'تم تفعيل التنسيق '
     end
 			data[tostring(matches[2])]["settings"]["lock_markdown"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1070,7 +1070,7 @@ if matches[1] == '/lockpin' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_pin"]
@@ -1078,7 +1078,7 @@ if matches[1] == '/lockpin' then
    if not lang then
 			text = 'Pin Has Been Locked'
    elseif lang then
-			text = 'قفل سنجاق کردن فعال شد'
+			text = 'تم تعطيل التثبيت '
     end
             data[tostring(matches[2])]["settings"]["lock_pin"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1086,7 +1086,7 @@ if matches[1] == '/lockpin' then
    if not lang then
 			text = 'Pin Has Been Unlocked'
    elseif lang then
-			text = 'قفل سنجاق کردن غیر فعال شد'
+			text = 'تم تفعيل التثبيت  '
     end
 			data[tostring(matches[2])]["settings"]["lock_pin"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1100,7 +1100,7 @@ if matches[1] == '/lockbots' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["lock_bots"]
@@ -1108,7 +1108,7 @@ if matches[1] == '/lockbots' then
    if not lang then
 			text = 'Bots Has Been Locked'
    elseif lang then
-			text = 'قفل ربات ها فعال شد'
+			text = 'تم تعطيل البوتات '
     end
             data[tostring(matches[2])]["settings"]["lock_bots"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1116,7 +1116,7 @@ if matches[1] == '/lockbots' then
    if not lang then
 			text = 'Bots Has Been Unlocked'
    elseif lang then
-			text = 'قفل ربات ها غیر فعال شد'
+			text = 'تم تفعيل البوتات '
     end
 			data[tostring(matches[2])]["settings"]["lock_bots"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1130,7 +1130,7 @@ if matches[1] == '/welcome' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chklock = data[tostring(matches[2])]["settings"]["welcome"]
@@ -1138,7 +1138,7 @@ if matches[1] == '/welcome' then
    if not lang then
 			text = 'Welcome Has Been Enabled'
    elseif lang then
-			text = 'خوش آمد گویی فعال شد'
+			text = 'تم تفعيل الترحيب'
     end
             data[tostring(matches[2])]["settings"]["welcome"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1146,7 +1146,7 @@ if matches[1] == '/welcome' then
    if not lang then
 			text = 'Welcome Has Been Disabled'
    elseif lang then
-			text = 'خوش آمد گویی غیر فعال شد'
+			text = 'تم تعطيب الترحيب'
     end
 			data[tostring(matches[2])]["settings"]["welcome"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1160,7 +1160,7 @@ if matches[1] == '/floodup' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local flood_max = 5
@@ -1176,7 +1176,7 @@ if matches[1] == '/floodup' then
    if not lang then
 			text = "Flood Sensitivity Has Been Set To : "..flood_max
    elseif lang then
-			text = "حساسیت پیام های مکرر تنظیم شد به : "..flood_max
+			text = "عدد مرات التكرار تم تعيينها الى : "..flood_max
     end
 			get_alert(msg.cb_id, text)
 		end 
@@ -1188,7 +1188,7 @@ if matches[1] == '/flooddown' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local flood_max = 5
@@ -1204,7 +1204,7 @@ if matches[1] == '/flooddown' then
    if not lang then
 			text = "Flood Sensitivity Has Been Set To : "..flood_max
    elseif lang then
-			text = "حساسیت پیام های مکرر تنظیم شد به : "..flood_max
+			text = "عدد مرات التكرار تم تعيينها الى  : "..flood_max
     end
 			get_alert(msg.cb_id, text)
 		end 
@@ -1216,7 +1216,7 @@ if matches[1] == '/charup' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local char_max = 5
@@ -1232,7 +1232,7 @@ if matches[1] == '/charup' then
    if not lang then
 			text = "Character Sensitivity Has Been Set To : "..char_max
    elseif lang then
-			text = "تعداد حروف مجاز تنظیم شد به : "..char_max
+			text = "تم تعديل عدد الحروف المسموحة الى: "..char_max
     end
 			get_alert(msg.cb_id, text)
 		end 
@@ -1244,7 +1244,7 @@ if matches[1] == '/chardown' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local char_max = 5
@@ -1260,7 +1260,7 @@ if matches[1] == '/chardown' then
    if not lang then
 			text = "Character Sensitivity Has Been Set To : "..char_max
    elseif lang then
-			text = "تعداد حروف مجاز تنظیم شد به : "..char_max
+			text = "تم تعديل عدد الحروف المسموحة الى : "..char_max
     end
 			get_alert(msg.cb_id, text)
 		end 
@@ -1272,7 +1272,7 @@ if matches[1] == '/floodtimeup' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local check_time = 5
@@ -1288,7 +1288,7 @@ if matches[1] == '/floodtimeup' then
    if not lang then
 			text = "Flood Check Time Has Been Set To : "..check_time
    elseif lang then
-			text = "زمان بررسی پیام های مکرر تنظیم شد به : "..check_time
+			text = "زمن التكرار تم تعيينه الى : "..check_time
     end
 			get_alert(msg.cb_id, text)
 		end 
@@ -1300,7 +1300,7 @@ if matches[1] == '/floodtimedown' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local check_time = 5
@@ -1316,7 +1316,7 @@ if matches[1] == '/floodtimedown' then
    if not lang then
 			text = "Flood Check Time Has Been Set To : "..check_time
    elseif lang then
-			text = "زمان بررسی پیام های مکرر تنظیم شد به : "..check_time
+			text = "زمن التكرار تم تعيينه الى  : "..check_time
     end
 			get_alert(msg.cb_id, text)
 		end 
@@ -1331,7 +1331,7 @@ if matches[1] == '/muteall' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_all"]
@@ -1339,7 +1339,7 @@ if matches[1] == '/muteall' then
     if not lang then
 			text = 'All Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن همه فعال شد'
+        text = 'تم منع الكل '
     end
             data[tostring(matches[2])]["mutes"]["mute_all"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1347,7 +1347,7 @@ if matches[1] == '/muteall' then
     if not lang then
 			text = 'All Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن همه غیر فعال شد'
+        text = ' تم السماح بالكل '
     end
 			data[tostring(matches[2])]["mutes"]["mute_all"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1361,7 +1361,7 @@ if matches[1] == '/mutegif' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_gif"]
@@ -1369,7 +1369,7 @@ if matches[1] == '/mutegif' then
     if not lang then
 			text = 'Gifs Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن تصاویر متحرک فعال شد'
+        text = 'تم منع الصور المتحركة  '
     end
             data[tostring(matches[2])]["mutes"]["mute_gif"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1377,7 +1377,7 @@ if matches[1] == '/mutegif' then
     if not lang then
 			text = 'Gifs Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن تصاویر متحرک غیر فعال شد'
+        text = 'تم السماح بالصور المتحركة '
     end
 			data[tostring(matches[2])]["mutes"]["mute_gif"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1391,7 +1391,7 @@ if matches[1] == '/mutetext' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_text"]
@@ -1399,7 +1399,7 @@ if matches[1] == '/mutetext' then
     if not lang then
 			text = 'Text Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن متن فعال شد'
+        text = 'تم منع الكتابة '
     end
             data[tostring(matches[2])]["mutes"]["mute_text"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1407,7 +1407,7 @@ if matches[1] == '/mutetext' then
     if not lang then
 			text = 'Text Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن متن غیر فعال شد'
+        text = 'تم السماح بالكتابة '
     end
 			data[tostring(matches[2])]["mutes"]["mute_text"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1421,7 +1421,7 @@ if matches[1] == '/muteinline' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_inline"]
@@ -1429,7 +1429,7 @@ if matches[1] == '/muteinline' then
     if not lang then
 			text = 'Inline Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن اینلاین فعال شد'
+        text = 'تم منع الانلاين '
     end
             data[tostring(matches[2])]["mutes"]["mute_inline"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1437,7 +1437,7 @@ if matches[1] == '/muteinline' then
     if not lang then
 			text = 'Inline Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن اینلاین غیر فعال شد'
+        text = 'تم السماح بالانلاين '
     end
 			data[tostring(matches[2])]["mutes"]["mute_inline"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1451,7 +1451,7 @@ if matches[1] == '/mutegame' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_game"]
@@ -1459,7 +1459,7 @@ if matches[1] == '/mutegame' then
     if not lang then
 			text = 'Game Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن بازی فعال شد'
+        text = 'تم منع الالعاب '
     end
             data[tostring(matches[2])]["mutes"]["mute_game"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1467,7 +1467,7 @@ if matches[1] == '/mutegame' then
     if not lang then
 			text = 'Game Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن بازی غیر فعال شد'
+        text = 'تم السماح بالالعاب '
     end
 			data[tostring(matches[2])]["mutes"]["mute_game"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1481,7 +1481,7 @@ if matches[1] == '/mutephoto' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_photo"]
@@ -1489,7 +1489,7 @@ if matches[1] == '/mutephoto' then
     if not lang then
 			text = 'Photo Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن عکس فعال شد'
+        text = 'تم منع الصور '
     end
             data[tostring(matches[2])]["mutes"]["mute_photo"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1497,7 +1497,7 @@ if matches[1] == '/mutephoto' then
     if not lang then
 			text = 'Photo Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن عکس غیر فعال شد'
+        text = 'تم السماح بالصور '
     end
 			data[tostring(matches[2])]["mutes"]["mute_photo"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1511,7 +1511,7 @@ if matches[1] == '/mutevideo' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_video"]
@@ -1519,7 +1519,7 @@ if matches[1] == '/mutevideo' then
     if not lang then
 			text = 'Video Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن فیلم فعال شد'
+        text = 'تم منع الفيديو '
     end
             data[tostring(matches[2])]["mutes"]["mute_video"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1527,7 +1527,7 @@ if matches[1] == '/mutevideo' then
     if not lang then
 			text = 'Video Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن فیلم غیر فعال شد'
+        text = 'تم السماح بالفيديو '
     end
 			data[tostring(matches[2])]["mutes"]["mute_video"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1541,7 +1541,7 @@ if matches[1] == '/muteaudio' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_audio"]
@@ -1549,7 +1549,7 @@ if matches[1] == '/muteaudio' then
     if not lang then
 			text = 'Audio Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن آهنگ فعال شد'
+        text = 'تم منع الصوتيات '
     end
             data[tostring(matches[2])]["mutes"]["mute_audio"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1557,7 +1557,7 @@ if matches[1] == '/muteaudio' then
     if not lang then
 			text = 'Audio Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن آهنگ غیر فعال شد'
+        text = 'تم السماح بالصوتيات '
     end
 			data[tostring(matches[2])]["mutes"]["mute_audio"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1571,7 +1571,7 @@ if matches[1] == '/mutevoice' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_voice"]
@@ -1579,7 +1579,7 @@ if matches[1] == '/mutevoice' then
     if not lang then
 			text = 'Voice Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن صدا فعال شد'
+        text = 'تم منع الملاحظة الصوتية'
     end
             data[tostring(matches[2])]["mutes"]["mute_voice"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1587,7 +1587,7 @@ if matches[1] == '/mutevoice' then
     if not lang then
 			text = 'Voice Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن صدا غیر فعال شد'
+        text = 'تم السماح بالملاحظة الصوتية'
     end
 			data[tostring(matches[2])]["mutes"]["mute_voice"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1601,7 +1601,7 @@ if matches[1] == '/mutesticker' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_sticker"]
@@ -1609,7 +1609,7 @@ if matches[1] == '/mutesticker' then
     if not lang then
 			text = 'Sticker Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن استیکر فعال شد'
+        text = 'تم منع الملصقات '
     end
             data[tostring(matches[2])]["mutes"]["mute_sticker"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1617,7 +1617,7 @@ if matches[1] == '/mutesticker' then
     if not lang then
 			text = 'Sticker Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن استیکر غیر فعال شد'
+        text = 'تم السماح بالملصقات '
     end
 			data[tostring(matches[2])]["mutes"]["mute_sticker"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1631,7 +1631,7 @@ if matches[1] == '/mutecontact' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_contact"]
@@ -1639,7 +1639,7 @@ if matches[1] == '/mutecontact' then
     if not lang then
 			text = 'Contact Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن مخاطب فعال شد'
+        text = 'تم منع جهات الاتصال '
     end
             data[tostring(matches[2])]["mutes"]["mute_contact"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1647,7 +1647,7 @@ if matches[1] == '/mutecontact' then
     if not lang then
 			text = 'Contact Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن مخاطب غیر فعال شد'
+        text = 'تم السماح بجهات الاتصال '
     end
 			data[tostring(matches[2])]["mutes"]["mute_contact"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1661,7 +1661,7 @@ if matches[1] == '/muteforward' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_forward"]
@@ -1669,7 +1669,7 @@ if matches[1] == '/muteforward' then
     if not lang then
 			text = 'Forward Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن نقل و قول فعال شد'
+        text = 'تم منع إعادة التوجيه  '
     end
             data[tostring(matches[2])]["mutes"]["mute_forward"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1677,7 +1677,7 @@ if matches[1] == '/muteforward' then
     if not lang then
 			text = 'Forward Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن نقل و قول غیر فعال شد'
+        text = 'تم السماح بإعادة التوجيه '
     end
 			data[tostring(matches[2])]["mutes"]["mute_forward"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1691,7 +1691,7 @@ if matches[1] == '/mutelocation' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_location"]
@@ -1699,7 +1699,7 @@ if matches[1] == '/mutelocation' then
     if not lang then
 			text = 'Location Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن موقعیت فعال شد'
+        text = 'تم منع الموقع '
     end
             data[tostring(matches[2])]["mutes"]["mute_location"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1707,7 +1707,7 @@ if matches[1] == '/mutelocation' then
     if not lang then
 			text = 'Location Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن موقعیت غیر فعال شد'
+        text = 'تم السماح بالموقع '
     end
 			data[tostring(matches[2])]["mutes"]["mute_location"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1721,7 +1721,7 @@ if matches[1] == '/mutedocument' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_document"]
@@ -1729,7 +1729,7 @@ if matches[1] == '/mutedocument' then
     if not lang then
 			text = 'Document Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن فایل فعال شد'
+        text = 'تم منع المستندات '
     end
             data[tostring(matches[2])]["mutes"]["mute_document"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1737,7 +1737,7 @@ if matches[1] == '/mutedocument' then
     if not lang then
 			text = 'Document Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن فایل غیر فعال شد'
+        text = 'تم السماح بالمستندات '
     end
 			data[tostring(matches[2])]["mutes"]["mute_document"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1751,7 +1751,7 @@ if matches[1] == '/mutetgservice' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_tgservice"]
@@ -1759,7 +1759,7 @@ if matches[1] == '/mutetgservice' then
     if not lang then
 			text = 'TgService Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن خدمات تلگرام فعال شد'
+        text = 'تم منع خدمات تيليجرام '
     end
             data[tostring(matches[2])]["mutes"]["mute_tgservice"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1767,7 +1767,7 @@ if matches[1] == '/mutetgservice' then
     if not lang then
 			text = 'TgService Has Been Unmuted'
     elseif lang then
-        text = 'بیصدا کردن خدمات تلگرام غیر فعال شد'
+        text = 'تم السماح بخدمات تيليجرام '
     end
 			data[tostring(matches[2])]["mutes"]["mute_tgservice"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1781,7 +1781,7 @@ if matches[1] == '/mutekeyboard' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local chkmute = data[tostring(matches[2])]["mutes"]["mute_keyboard"]
@@ -1789,7 +1789,7 @@ if matches[1] == '/mutekeyboard' then
     if not lang then
 			text = 'Keyboard Has Been Muted'
     elseif lang then
-        text = 'بیصدا کردن کیبورد شیشه ای فعال شد'
+        text = 'تم منع لوحة المفاتيح '
     end
             data[tostring(matches[2])]["mutes"]["mute_keyboard"] = "yes"
 			save_data(_config.moderation.data, data)
@@ -1797,7 +1797,7 @@ if matches[1] == '/mutekeyboard' then
     if not lang then
 			text = 'Keyboard Has Been uted'
     elseif lang then
-        text = 'بیصدا کردن کیبورد شیشه ای غیر فعال شد'
+        text = 'تم السماح بلوحة المفاتيح '
     end
 			data[tostring(matches[2])]["mutes"]["mute_keyboard"] = "no"
 			save_data(_config.moderation.data, data)
@@ -1814,7 +1814,7 @@ if matches[1] == '/more' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
     if not lang then
@@ -1848,26 +1848,26 @@ if matches[1] == '/more' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> لیست مالکین", callback_data="/ownerlist:"..matches[2]},
-				{text = "> لیست مدیران", callback_data="/modlist:"..matches[2]}
+				{text = "> قائمة المدراء", callback_data="/ownerlist:"..matches[2]},
+				{text = "> قائمة المشرفين", callback_data="/modlist:"..matches[2]}
 			},
 			{
-				{text = "> لیست سایلنت", callback_data="/silentlist:"..matches[2]},
-				{text = "> لیست فیلتر", callback_data="/filterlist:"..matches[2]}
+				{text = "> المكتومين", callback_data="/silentlist:"..matches[2]},
+				{text = "> الكلمات المفلترة", callback_data="/filterlist:"..matches[2]}
 			},
 			{
-				{text = "> لیست بن", callback_data="/bans:"..matches[2]},
-				{text = "> لیست سفید", callback_data="/whitelists:"..matches[2]}
+				{text = "> المحظورون", callback_data="/bans:"..matches[2]},
+				{text = "> القائمة البيضاء", callback_data="/whitelists:"..matches[2]}
         },
 			{
-				{text = "> لینک گروه", callback_data="/link:"..matches[2]},
-				{text = "> قوانین گروه", callback_data="/rules:"..matches[2]}
+				{text = "> رابط المجموعة", callback_data="/link:"..matches[2]},
+				{text = "> القوانين", callback_data="/rules:"..matches[2]}
 			},
 			{
-				{text = "> نمایش پیام خوشامد", callback_data="/showwlc:"..matches[2]},
+				{text = "> عرض الترحيب", callback_data="/showwlc:"..matches[2]},
 			},
 			{ 
-				{text = "> بازگشت به تنظیمات کلی", callback_data="/option:"..matches[2]}
+				{text = "> الرجوع للتفضيلات", callback_data="/option:"..matches[2]}
 			}
 		}
   end
@@ -1880,7 +1880,7 @@ if matches[1] == '/ownerlist' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local i = 1
@@ -1888,13 +1888,13 @@ if matches[1] == '/ownerlist' then
      if not lang then
 			text = "_No_ *owner* _in this group_"
    elseif lang then
-			text = "_هیچ مالکی برای گروه تعیین نشده_"
+			text = "_لا يوجد مدراء في هذه المجموعة_"
    end
 		else
      if not lang then
 			text = "*List Of Group Owners :*\n"
    elseif lang then
-			text = "_لیست مالکین گروه :_\n"
+			text = "_قائمة المدراء :_\n"
    end
 			for k,v in pairs(data[tostring(matches[2])]['owners']) do
 				text = text ..i.. '- '..v..' [' ..k.. '] \n'
@@ -1915,10 +1915,10 @@ if matches[1] == '/ownerlist' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> برکناری تمام مالکین", callback_data="/cleanowners:"..matches[2]}
+				{text = "> تنظيف المدراء", callback_data="/cleanowners:"..matches[2]}
 			},
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
   end
@@ -1931,20 +1931,20 @@ if matches[1] == '/cleanowners' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Bot Admin")
    elseif lang then
-		get_alert(msg.cb_id, "شما ادمین ربات نیستید")
+		get_alert(msg.cb_id, "انت لست مشرفا")
    end
 	else
 		if next(data[tostring(matches[2])]['owners']) == nil then
      if not lang then
 			text = "_No_ *owner* _in this group_"
    elseif lang then
-			text = "_هیچ مالکی برای گروه تعیین نشده_"
+			text = "_لا يوجد مدراء في هذه المجموعة_"
    end
 		else
      if not lang then
 			text = "_All_ *Group Owners* _Has Been_ *Demoted*"
    elseif lang then
-			text = "_تمام مالکین از مقام خود برکنار شدند_"
+			text = "_تم اازالة جميع المدراء"
    end
 			for k,v in pairs(data[tostring(matches[2])]['owners']) do
 				data[tostring(matches[2])]['owners'][tostring(k)] = nil
@@ -1962,7 +1962,7 @@ if matches[1] == '/cleanowners' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> بازگشت", callback_data="/ownerlist:"..matches[2]}
+				{text = "> رجوع", callback_data="/ownerlist:"..matches[2]}
 			}
 		}
    end
@@ -1975,21 +1975,21 @@ if matches[1] == '/filterlist' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		if next(data[tostring(matches[2])]['filterlist']) == nil then --fix way
    if not lang then
 			text = "*Filter List* _Is Empty_"
      elseif lang then
-			text = "_لیست کلمات فیلتر شده خالی است_"
+			text = "_القائمة  فارغة_"
      end
 		else 
 			local i = 1
    if not lang then
 			text = '*List Of Filtered Words List :*\n'
      elseif lang then
-			text = '_لیست کلمات فیلتر شده :_\n'
+			text = '_قائمة الكلمات المفلترة فارغة:_\n'
     end
 			for k,v in pairs(data[tostring(matches[2])]['filterlist']) do
 				text = text..''..i..' - '..check_markdown(k)..'\n'
@@ -2010,10 +2010,10 @@ if matches[1] == '/filterlist' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> پاک کردن", callback_data="/cleanfilterlist:"..matches[2]}
+				{text = "> تنظيف القائمة ", callback_data="/cleanfilterlist:"..matches[2]}
 			},
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
   end
@@ -2026,20 +2026,20 @@ if matches[1] == '/cleanfilterlist' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		if next(data[tostring(matches[2])]['filterlist']) == nil then
    if not lang then
 			text = "*Filter List* _Is Empty_"
      elseif lang then
-			text = "_لیست کلمات فیلتر شده خالی است_"
+			text = "_القائمة فارغة_"
      end
 		else
    if not lang then
 			text = "*Filter List* _Has Been_ *Cleaned*"
      elseif lang then
-			text = "_لیست کلمات فیلتر پاک شد_"
+			text = "_تم تنظيف القائمة_"
      end
 			for k,v in pairs(data[tostring(matches[2])]['filterlist']) do
 				data[tostring(matches[2])]['filterlist'][tostring(k)] = nil
@@ -2057,7 +2057,7 @@ if matches[1] == '/cleanfilterlist' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> بازگشت", callback_data="/filterlist:"..matches[2]}
+				{text = "> رجوع", callback_data="/filterlist:"..matches[2]}
 			}
 		}
   end
@@ -2070,7 +2070,7 @@ if matches[1] == '/modlist' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local i = 1
@@ -2078,13 +2078,13 @@ if matches[1] == '/modlist' then
      if not lang then
 			text = "_No_ *moderator* _in this group_"
    elseif lang then
-			text = "_هیچ مدیری برای گروه تعیین نشده_"
+			text = "_لا يوجد مشرفين في هذه المجموعة_"
    end
 		else
      if not lang then
 			text = "*List Of Moderators :*\n"
    elseif lang then
-			text = "_لیست مدیران گروه :_\n"
+			text = "_قائمة المشرفين:_\n"
    end
 			for k,v in pairs(data[tostring(matches[2])]['mods']) do
 				text = text ..i.. '- '..v..' [' ..k.. '] \n'
@@ -2105,10 +2105,10 @@ if matches[1] == '/modlist' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> برکناری تمام مدیران", callback_data="/cleanmods:"..matches[2]}
+				{text = "> ازالة جميع المشرفين", callback_data="/cleanmods:"..matches[2]}
 			},
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
   end
@@ -2121,20 +2121,20 @@ if matches[1] == '/cleanmods' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Group Owner")
    elseif lang then
-		get_alert(msg.cb_id, "شما صاحب گروه نیستید")
+		get_alert(msg.cb_id, "انت مدير في هذه المجموعة")
    end
 	else
 		if next(data[tostring(matches[2])]['mods']) == nil then
      if not lang then
 			text = "_No_ *moderator* _in this group_"
    elseif lang then
-			text = "_هیچ مدیری برای گروه تعیین نشده_"
+			text = "_لا يوجد مشرفين في هذه المجموعة_"
    end
 		else
      if not lang then
 			text = "_All_ *Moderators* _Has Been_ *Demoted*"
    elseif lang then
-			text = "_تمام مدیران از مقام خود برکنار شدند_"
+			text = "_تم ازالة جميع المشرفين_"
    end
 			for k,v in pairs(data[tostring(matches[2])]['mods']) do
 				data[tostring(matches[2])]['mods'][tostring(k)] = nil
@@ -2155,7 +2155,7 @@ if matches[1] == '/bans' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local i = 1
@@ -2163,13 +2163,13 @@ if matches[1] == '/bans' then
      if not lang then
 			text = "_No_ *banned users* _in this group_"
    elseif lang then
-			text = "_هیچ فردی از این گروه محروم نشده_"
+			text = "_لا يوجد محظورين_"
    end
 		else
      if not lang then
 			text = "*List Of Banned Users :*\n"
    elseif lang then
-			text = "_لیست افراد محروم شده از گروه :_\n"
+			text = "_قائمة المحظورين :_\n"
    end
 			for k,v in pairs(data[tostring(matches[2])]['banned']) do
 				text = text ..i.. '- '..v..' [' ..k.. '] \n'
@@ -2190,10 +2190,10 @@ if matches[1] == '/bans' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> پاک کردن لیست بن ", callback_data="/cleanbans:"..matches[2]}
+				{text = "> مسح المحظورين", callback_data="/cleanbans:"..matches[2]}
 			},
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
   end
@@ -2205,7 +2205,7 @@ if matches[1] == '/silentlist' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local i = 1
@@ -2213,13 +2213,13 @@ if matches[1] == '/silentlist' then
      if not lang then
 			text = "_No_ *silent users* _in this group_"
    elseif lang then
-			text = "_هیچ فردی در این گروه سایلنت نشده_"
+			text = "_لا يوجد مكتومين_"
    end
 		else
      if not lang then
 			text = "*List Of Silent Users :*\n"
    elseif lang then
-			text = "_لیست افراد سایلنت شده :_\n"
+			text = "_قائمة المكتومين:_\n"
    end
 			for k,v in pairs(data[tostring(matches[2])]['is_silent_users']) do
 				text = text ..i.. '- '..v..' [' ..k.. '] \n'
@@ -2240,10 +2240,10 @@ if matches[1] == '/silentlist' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> پاک کردن لیست سایلنت", callback_data="/cleansilentlist:"..matches[2]}
+				{text = "> مسح المكتومين", callback_data="/cleansilentlist:"..matches[2]}
 			},
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
   end
@@ -2255,20 +2255,20 @@ if matches[1] == '/cleansilentlist' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		if next(data[tostring(matches[2])]['is_silent_users']) == nil then
      if not lang then
 			text = "_No_ *silent users* _in this group_"
    elseif lang then
-			text = "_هیچ فردی در این گروه سایلنت نشده"
+			text = "_لا يوجد مكتومين"
    end
 		else
      if not lang then
 			text = "_All_ *Silent Users* _Has Been_ *Unsilent*"
    elseif lang then
-			text = "_تمام افراد سایلنت شده از سایلنت خارج شدند_"
+			text = "_تم مسح جميع المكتومين_"
    end
 			for k,v in pairs(data[tostring(matches[2])]['is_silent_users']) do
 				data[tostring(matches[2])]['is_silent_users'][tostring(k)] = nil
@@ -2286,7 +2286,7 @@ if matches[1] == '/cleansilentlist' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> بازگشت", callback_data="/silentlist:"..matches[2]}
+				{text = "> رجوع", callback_data="/silentlist:"..matches[2]}
 			}
 		}
   end
@@ -2298,20 +2298,20 @@ if matches[1] == '/cleanbans' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		if next(data[tostring(matches[2])]['banned']) == nil then
      if not lang then
 			text = "_No_ *banned users* _in this group_"
    elseif lang then
-			text = "_هیچ فردی از این گروه محروم نشده"
+			text = "_لا يوجد محظورين"
    end
 		else
      if not lang then
 			text = "_All_ *Banned Users* _Has Been_ *Unbanned*"
    elseif lang then
-			text = "_تمام افراد محروم شده از محرومیت این گروه خارج شدند_"
+			text = "_تم مسح المحظورين_"
    end
 			for k,v in pairs(data[tostring(matches[2])]['banned']) do
 				data[tostring(matches[2])]['banned'][tostring(k)] = nil
@@ -2329,7 +2329,7 @@ if matches[1] == '/cleanbans' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> بازگشت", callback_data="/bans:"..matches[2]}
+				{text = "> رجوع", callback_data="/bans:"..matches[2]}
 			}
 		}
   end
@@ -2341,7 +2341,7 @@ if matches[1] == '/link' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local linkgp = data[tostring(matches[2])]['settings']['linkgp']
@@ -2349,13 +2349,13 @@ if matches[1] == '/link' then
    if not lang then
 			text = "_First set a_ *link* _for group with using_ /setlink"
     elseif lang then
-			text = "_ابتدا با دستور_ setlink/ _لینک جدیدی برای گروه تعیین کنید_"
+			text = "/setlink اولا اضف رابط عن طريق _"
   end
 		else
    if not lang then
 			text = "[Group Link Is Here]("..linkgp..")"
     elseif lang then
-			text = "[لینک گروه اینجاست]("..linkgp..")"
+			text = "[الرابط]("..linkgp..")"
         end
 		end
   if not lang then
@@ -2369,7 +2369,7 @@ if matches[1] == '/link' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
   end
@@ -2382,7 +2382,7 @@ if matches[1] == '/rules' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local rules = data[tostring(matches[2])]['rules']
@@ -2396,7 +2396,7 @@ if matches[1] == '/rules' then
      if not lang then
 			text = '*Group Rules :*\n'..rules
    elseif lang then
-			text = '_قوانین گروه :_\n'..rules
+			text = '_القوانين:_\n'..rules
        end
 		end
    if not lang then
@@ -2416,7 +2416,7 @@ if matches[1] == '/rules' then
 				{text = "> پاک کردن", callback_data="/cleanrules:"..matches[2]}
 			},
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
   end
@@ -2428,7 +2428,7 @@ if matches[1] == '/cleanrules' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local rules = data[tostring(matches[2])]['rules']
@@ -2436,13 +2436,13 @@ if matches[1] == '/cleanrules' then
     if not lang then
 			text = "`No Rules Available`"
    elseif lang then
-			text = "_قوانین گروه ثبت نشده_"
+			text = "_لا يوجد قوانين_"
    end
 		else
     if not lang then
 			text = "*Group Rules* _Has Been_ *Cleaned*"
    elseif lang then
-			text = "_قوانین گروه پاک شد_"
+			text = "_تم مسح القوانين_"
   end
 			data[tostring(matches[2])]['rules'] = nil
 			save_data(_config.moderation.data, data)
@@ -2458,7 +2458,7 @@ if matches[1] == '/cleanrules' then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> بازگشت", callback_data="/rules:"..matches[2]}
+				{text = "> رجوع", callback_data="/rules:"..matches[2]}
 			}
 		}
   end
@@ -2470,21 +2470,21 @@ end
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		if next(data[tostring(matches[2])]['whitelist']) == nil then
 			if not lang then
 				text = "_White List is Empty._"
 			else
-				text = "_لیست سفید خالی می باشد._"
+				text = "_القائمة فارغة._"
 			end
 		else 
 			local i = 1
 			if not lang then
 				text = '_> White List:_ \n'
 			else
-				text = '_> لیست سفید:_ \n'
+				text = '_> القائمة البيضاء:_ \n'
 			end
 			for k,v in pairs(data[tostring(matches[2])]['whitelist']) do
 				text = text..''..i..' - '..check_markdown(v)..' ' ..k.. ' \n'
@@ -2504,10 +2504,10 @@ end
 		else
 		keyboard.inline_keyboard = {
 			{
-				{text = "> حذف لیست سفید", callback_data="/cleanwhitelists:"..matches[2]}
+				{text = "> مسح القائمة البيضاء", callback_data="/cleanwhitelists:"..matches[2]}
 			},
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
 		end
@@ -2520,20 +2520,20 @@ if matches[1] == '/cleanwhitelists' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		if next(data[tostring(matches[2])]['whitelist']) == nil then
 			if not lang then
 				text = "_White List is Empty._"
 			else
-				text = "_لیست سفید خالی می باشد._"
+				text = "_القائمة فارغة._"
 			end
 		else
 			if not lang then
 				text = "_White List Was Cleared._"
 			else
-				text = "_لیست سفید حذف شد._"
+				text = "_تم مسح القائمة البيضاء._"
 			end
 			for k,v in pairs(data[tostring(matches[2])]['whitelist']) do
 				data[tostring(matches[2])]['whitelist'][tostring(k)] = nil
@@ -2552,7 +2552,7 @@ if matches[1] == '/cleanwhitelists' then
 				keyboard.inline_keyboard = {
 
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
 		end
@@ -2565,7 +2565,7 @@ if not is_mod1(matches[2], msg.from.id) then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 		local wlc = data[tostring(matches[2])]['setwelcome']
@@ -2573,13 +2573,13 @@ if not is_mod1(matches[2], msg.from.id) then
 		if not lang then
 				text = "_Welcome Message Not Set._\n*Default Message :* _Welcome Dude_"
 			else
-				text = "_پیام خوشامد تنظیم نشده است._"
+				text = "_لا يوجد رسالة ترحيب._"
 			end
 		else
 		if not lang then
 			text = '_Welcome Message:_\n'..wlc
 		else
-			text = '_پیام خوشامد:_\n'..wlc
+			text = '_رسالة الترحيب:_\n'..wlc
 		end
 		end
 		local keyboard = {} 
@@ -2595,10 +2595,10 @@ if not is_mod1(matches[2], msg.from.id) then
 		else
 		keyboard.inline_keyboard = {
 			{ 
-				{text = "> حذف پیام خوشامد", callback_data="/cleanwlcmsg:"..matches[2]}
+				{text = "> مسح رسالة الترحيب", callback_data="/cleanwlcmsg:"..matches[2]}
 			},
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
 		end
@@ -2611,7 +2611,7 @@ if not is_mod1(matches[2], msg.from.id) then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
 local wlc = data[tostring(matches[2])]['setwelcome']
@@ -2619,13 +2619,13 @@ local wlc = data[tostring(matches[2])]['setwelcome']
 		if not lang then
 				text = "_Welcome Message Not Set._"
 			else
-				text = "_پیام خوشامد تنظیم نشده است._"
+				text = "_لا يوجد رسالة ترحيب._"
 			end
 		else
 		if not lang then
 			text = '_Welcome Message Was Cleaned._'
 		else
-			text = '_پیام خوشامد حذف شد._'
+			text = '_تم مسح رسالة الترحيب._'
 		end
 		data[tostring(matches[2])]['setwelcome'] = nil
 		save_data(_config.moderation.data, data)
@@ -2642,7 +2642,7 @@ local keyboard = {}
 				keyboard.inline_keyboard = {
 
 			{ 
-				{text = "> بازگشت", callback_data="/more:"..matches[2]}
+				{text = "> رجوع", callback_data="/more:"..matches[2]}
 			}
 		}
 		end
@@ -2656,11 +2656,10 @@ if matches[1] == '/beyond' then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "> SoLiD", callback_data="/solid:"..matches[2]}, 
-			{text = "> ToOfan", callback_data="/toofan:"..matches[2]}
+			{text = "> أبو عبيد", callback_data="/solid:"..matches[2]}, 
 		},
 		{
-			{text = '> Our GitHub ', url = 'https://www.github.com/BeyondTeam'}
+
 		},
 		{
 			{text= '> Back' ,callback_data = '/option:'..matches[2]}
@@ -2670,69 +2669,70 @@ if matches[1] == '/beyond' then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "> سعید", callback_data="/solid:"..matches[2]}, 
-			{text = "> طوفان", callback_data="/toofan:"..matches[2]}
+			{text = "> أبو عبيد", callback_data="/solid:"..matches[2]}, 
+			
 		},
 		{
-			{text = '> گیت هاب تیم ', url = 'https://www.github.com/BeyondTeam'}
+	
 		},
 		{
-			{text= '> بازگشت' ,callback_data = '/option:'..matches[2]}
+			{text= '> رجوع' ,callback_data = '/option:'..matches[2]}
 		}				
 	}
    end
     edit_inline(msg.message_id, text, keyboard)
 end
 
-if matches[1] == '/solid' then
-local text = [[*》SoLiD Information《*
-_》Age :_ *26*
-_》Name :_ *Saeid Rostami*
-_》City :_ *Shahriar - Tehran*
-*-------------------------*
-*》GitHub :《*
-》[SoLiD021](Github.Com/SoLiD021)
-*-------------------------*
-*》Bridges :《*
-_》Pv : _[@SoLiD](Telegram.Me/SoLiD)
-_》PvResan : _[@SoLiD Pv](Telegram.Me/SoLiD021Pv_Bot)
-*-------------------------*
-*》Expertise :《*
-_》_*Lua*, *Cli* `and` *Api* _Bots_
-*-------------------------*]]
-  if not lang then
-		keyboard = {} 
-		keyboard.inline_keyboard = {
-			{
-				{text = "> Back", callback_data="/beyond:"..matches[2]}
-			}
-		}
-  elseif lang then
-		keyboard = {} 
-		keyboard.inline_keyboard = {
-			{
-				{text = "> بازگشت", callback_data="/beyond:"..matches[2]}
-			}
-		}
-  end
-    edit_inline(msg.message_id, text, keyboard)
-end
-if matches[1] == '/toofan' then
-local text = [[*》ToOfan Information《*
-_》Age :_ *35*
-_》Name :_ *Ali AzizAbadi*
-_》City :_ *Bam - Kerman*
-*-------------------------*
-*》GitHub :《*
-》[To0fan](GitHub.Com/To0fan)
-*-------------------------*
-*》Bridges :《*
-_》Pv :_ [@ToOfan](Telegram.Me/ToOfan)
-_》PvResan :_ [@ToOfanRobot](Telegram.Me/ToOfanRobot)
-*-------------------------*
-*》Expertise :《*
-*》C#, Lua, VB.Net, JAVA*
 
+if matches[1] == '/solid' then
+	local text = [[*》SoLiD Information《*
+	_》Age :_ *26*
+	_》Name :_ *Saeid Rostami*
+	_》City :_ *Shahriar - Tehran*
+	*-------------------------*
+	*》GitHub :《*
+	》[SoLiD021](Github.Com/SoLiD021)
+	*-------------------------*
+	*》Bridges :《*
+	_》Pv : _[@SoLiD](Telegram.Me/SoLiD)
+	_》PvResan : _[@SoLiD Pv](Telegram.Me/SoLiD021Pv_Bot)
+	*-------------------------*
+	*》Expertise :《*
+	_》_*Lua*, *Cli* `and` *Api* _Bots_
+	*-------------------------*]]
+	  if not lang then
+			keyboard = {} 
+			keyboard.inline_keyboard = {
+				{
+					{text = "> Back", callback_data="/beyond:"..matches[2]}
+				}
+			}
+	  elseif lang then
+			keyboard = {} 
+			keyboard.inline_keyboard = {
+				{
+					{text = "> بازگشت", callback_data="/beyond:"..matches[2]}
+				}
+			}
+	  end
+		edit_inline(msg.message_id, text, keyboard)
+	end
+	if matches[1] == '/toofan' then
+	local text = [[*》ToOfan Information《*
+	_》Age :_ *35*
+	_》Name :_ *Ali AzizAbadi*
+	_》City :_ *Bam - Kerman*
+	*-------------------------*
+	*》GitHub :《*
+	》[To0fan](GitHub.Com/To0fan)
+	*-------------------------*
+	*》Bridges :《*
+	_》Pv :_ [@ToOfan](Telegram.Me/ToOfan)
+	_》PvResan :_ [@ToOfanRobot](Telegram.Me/ToOfanRobot)
+	*-------------------------*
+	*》Expertise :《*
+	*》C#, Lua, VB.Net, JAVA*
+	
 *-------------------------*]]
   if not lang then
 		keyboard = {} 
@@ -2745,7 +2745,7 @@ _》PvResan :_ [@ToOfanRobot](Telegram.Me/ToOfanRobot)
 		keyboard = {} 
 		keyboard.inline_keyboard = {
 			{
-				{text = "> بازگشت", callback_data="/beyond:"..matches[2]}
+				{text = "> رجوع", callback_data="/beyond:"..matches[2]}
 			}
 		}
   end
@@ -2756,13 +2756,13 @@ if matches[1] == '/exit' then
      if not lang then
 		get_alert(msg.cb_id, "You Are Not Moderator")
    elseif lang then
-		get_alert(msg.cb_id, "شما مدیر نیستید")
+		get_alert(msg.cb_id, "أنت لست مشرفا")
    end
 	else
     if not lang then
 		 text = '*Group Option Closed*'
    elseif lang then
-		 text = '_تنظیمات کلی بسته شده_'
+		 text = 'تفضيلات المجموعة معطلة_'
    end
 		edit_inline(msg.message_id, text)
 	end
