@@ -114,7 +114,7 @@ local settings = data[tostring(GP_id)]["settings"]
 		}				
 	}
    elseif lang then
- text = '_المزيد من الإعدادات_'
+ text = '_المزيد من التفضيلات_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
@@ -342,10 +342,10 @@ local lang = redis:get(hash)
 			{text = group_welcone, callback_data="/welcome:"..GP_id}
 		},
 		{
-			{text = '> المزيد من التفضيلات ', callback_data = '/moresettings:'..GP_id}
+			{text = '> المزيد من الاعدادات ', callback_data = '/moresettings:'..GP_id}
 		},
 		{
-			{text = '> التفضيلات', callback_data = '/option:'..GP_id}
+			{text = '> الخيارات', callback_data = '/option:'..GP_id}
 		}				
 	}
   end
@@ -581,7 +581,7 @@ local lang = redis:get(hash)
 			{text = mute_keyboard, callback_data="/mutekeyboard:"..GP_id}
 		},
 		{
-			{text = '> التفضيلات', callback_data = '/option:'..GP_id}
+			{text = '> الخيارات', callback_data = '/option:'..GP_id}
 		}				
 	}
   end
@@ -1867,7 +1867,7 @@ if matches[1] == '/more' then
 				{text = "> عرض الترحيب", callback_data="/showwlc:"..matches[2]},
 			},
 			{ 
-				{text = "> الرجوع للتفضيلات", callback_data="/option:"..matches[2]}
+				{text = "> الرجوع للخيارات", callback_data="/option:"..matches[2]}
 			}
 		}
   end
