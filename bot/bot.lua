@@ -166,24 +166,9 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = ''..BeyondTeam..'/data/moderation.json'},
-    info_text = [[*》Beyond Helper Bot V1.5*
-`》An helper bot of` *BDReborn* `based on` *BDMessenger*
-
-》[Beyond Helper](https://github.com/AbdulazizAlatwi/BDHelper)
-
-*》Admins :*
-*》Founder & Developer :* [SoLiD](Telegram.Me/SoLiD)
-_》Developer :_ [ToOfan](Telegram.Me/ToOfan)
-_》Developer & Sponser :_ [MAKAN](Telegram.Me/MAKAN)
-
-*》Special thanks to :*
-》[Amir Bagheri](Telegram.Me/CodeLua)
-
-*》Our channel :*
-》[AbdulazizAlatwi](Telegram.Me/AbdulazizAlatwi)
-
-*》Our Site :*
-》[AbdulazizAlatwi](AbdulazizAlatwi)
+    info_text = [[أبو عبيد
+@AbdulazizAlatwi
+T.Me/AbdulazizAlatwi)
 ]],
   }
   serialize_to_file(config, './data/config.lua')
