@@ -56,7 +56,7 @@ local lang = redis:get(hash)
 		}				
 	}
   elseif lang then
-	 text = '_الاعدادات_'
+	 text = 'الخيارات'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
@@ -142,7 +142,7 @@ local settings = data[tostring(GP_id)]["settings"]
 			{text = "➖", callback_data='/floodtimedown:'..GP_id}
 		},
 		{
-			{text = '> Back ', callback_data = '/settings:'..GP_id}
+			{text = '> رجوع ', callback_data = '/settings:'..GP_id}
 		}				
 	}
    end
@@ -223,7 +223,7 @@ local lang = redis:get(hash)
 		group_welcone = 'no'
 	end
     if not lang then
- text = '_Welcome To_ *Group Settings*'
+ text = '*Group Settings*'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
@@ -342,10 +342,10 @@ local lang = redis:get(hash)
 			{text = group_welcone, callback_data="/welcome:"..GP_id}
 		},
 		{
-			{text = '> المزيد من التفضيلات ', callback_data = '/moresettings:'..GP_id}
+			{text = '> المزيد من الاعدادات ', callback_data = '/moresettings:'..GP_id}
 		},
 		{
-			{text = '> التفضيلات', callback_data = '/option:'..GP_id}
+			{text = '> الخيارات', callback_data = '/option:'..GP_id}
 		}				
 	}
   end
@@ -581,7 +581,7 @@ local lang = redis:get(hash)
 			{text = mute_keyboard, callback_data="/mutekeyboard:"..GP_id}
 		},
 		{
-			{text = '> التفضيلات', callback_data = '/option:'..GP_id}
+			{text = '> الخيارات', callback_data = '/option:'..GP_id}
 		}				
 	}
   end
@@ -654,13 +654,13 @@ if msg.query and msg.query:match("-%d+") and is_sudo(msg) then
 	keyboard = {}
 	keyboard.inline_keyboard = {
 		{
-			{text = ' Go To Group Option ', callback_data = '/lang:'..chatid}
+			{text = ' اختيار اللغة', callback_data = '/lang:'..chatid}
 		},
 		{
 			{text= 'Exit' ,callback_data = '/exit:'..chatid}
 		}					
 	}
-	send_inline(msg.id,'settings','Group Option','Tap Here','Please select an option.!',keyboard)
+	send_inline(msg.id,'settings','Group Option','Tap Here','لوحة التحكم \n Control Panel .!',keyboard)
 end
 if msg.cb then
 local hash = "gp_lang:"..matches[2]
@@ -679,7 +679,7 @@ local lang = redis:get(hash)
 		edit_inline(msg.message_id, "_المجموعة غير مضافة_")
    end
 	else
-	local text = '_Please Select An_ *Language*'
+	local text = 'الرجاء اختيار لغة \n Please Select An Language'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
